@@ -1,0 +1,32 @@
+@import './utilities';
+@import './variables';
+
+#nav{
+    @include flexCenter;
+    justify-content: space-around;
+    background: #051920;
+    margin: auto;
+    height: 10vh;
+    #logo{
+        text-transform: uppercase;
+        h1{
+            font-size: 2rem;
+        }
+    }
+
+    .btn{
+        padding: $btnPadding;
+        border-radius: 3px;
+        margin: 0 .5rem;
+    }
+    .btn-primary{
+        background-color: #f4d35e;
+        color: #051920;
+        border: none;
+    }
+    .btn-secondary{
+        background-color: transparent;
+        color: #e4f2fc;
+        border: 1px solid #e4f2fc;
+    }
+}
