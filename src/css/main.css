@@ -24,10 +24,18 @@
   color: #051920;
   border: none;
 }
+#nav .btn-primary:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
 #nav .btn-secondary {
   background-color: transparent;
   color: #e4f2fc;
   border: 1px solid #e4f2fc;
+}
+#nav .btn-secondary:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
 * {
@@ -36,10 +44,18 @@
   padding: 0;
 }
 
+#welcomeBg {
+  height: 100vh;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
   min-height: 100vh;
   font-family: "Source Sans Pro", sans-serif;
   color: #e4f2fc;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

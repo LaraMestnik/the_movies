@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/main.css';
+import Button from './Button.js';
 
 export default function Navbar() {
     return (
@@ -8,8 +8,8 @@ export default function Navbar() {
                 <h1>the movies</h1>
             </div>
             <div className="btn-container">
-                <button className="btn btn-primary">Sign Up</button>
-                <button className="btn btn-secondary">Log In</button>
+                <Button btnStyle="primary" btnText="Sign Up" />
+                <Button btnText="Log In" />
             </div>
         </nav>
     )

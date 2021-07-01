@@ -23,10 +23,18 @@
         background-color: #f4d35e;
         color: #051920;
         border: none;
+        &:hover{
+            opacity: .9;
+            cursor: pointer;
+        }
     }
     .btn-secondary{
         background-color: transparent;
         color: #e4f2fc;
         border: 1px solid #e4f2fc;
+        &:hover{
+            opacity: .8;
+            cursor: pointer;
+        }
     }
 }
