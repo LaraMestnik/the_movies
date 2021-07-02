@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap");
 .btn {
-  padding: 7px 17px;
   border-radius: 3px;
   margin: 0 0.5rem;
 }
@@ -23,6 +22,20 @@
 .btn-secondary:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.btn-small {
+  padding: 7px 17px;
+}
+
+.btn-medium {
+  padding: 20px 30px;
+}
+
+.btn-large {
+  padding: 19px 70px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 #nav {
@@ -48,7 +61,6 @@
 }
 
 .btn {
-  padding: 7px 17px;
   border-radius: 3px;
   margin: 0 0.5rem;
 }
@@ -71,6 +83,20 @@
 .btn-secondary:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.btn-small {
+  padding: 7px 17px;
+}
+
+.btn-medium {
+  padding: 20px 30px;
+}
+
+.btn-large {
+  padding: 19px 70px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 .welcome {
@@ -86,9 +112,10 @@
   background-size: cover;
 }
 .welcome__title {
-  margin-bottom: 10rem;
+  margin-top: -4rem;
+  margin-bottom: 2rem;
   text-transform: capitalize;
-  color: #f4d35e;
+  color: #e4f2fc;
   font-size: 4.5rem;
   width: 40vw;
   text-align: center;
@@ -103,7 +130,6 @@
 }
 
 .btn {
-  padding: 7px 17px;
   border-radius: 3px;
   margin: 0 0.5rem;
 }
@@ -126,6 +152,20 @@
 .btn-secondary:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+.btn-small {
+  padding: 7px 17px;
+}
+
+.btn-medium {
+  padding: 20px 30px;
+}
+
+.btn-large {
+  padding: 19px 70px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 body {

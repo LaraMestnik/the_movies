@@ -7,10 +7,10 @@
 }
 
 .btn{
-    padding: $btnPadding;
     border-radius: 3px;
     margin: 0 .5rem;
 }
+
 .btn-primary{
     background-color: #f4d35e;
     color: #051920;
@@ -28,4 +28,18 @@
         opacity: .8;
         cursor: pointer;
     }
+}
+
+.btn-small{
+    padding: 7px 17px;
+}
+
+.btn-medium{
+    padding: 20px 30px;
+}
+
+.btn-large{
+    padding: 19px 70px;
+    font-size: 1.8rem;
+    text-transform: uppercase;
 }

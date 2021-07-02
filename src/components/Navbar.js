@@ -8,7 +8,6 @@ export default function Navbar() {
                 <h1>the movies</h1>
             </div>
             <div className="btn-container">
-                <Button btnStyle="primary" btnText="Sign Up" />
                 <Button btnText="Log In" />
             </div>
         </nav>
