@@ -1,0 +1,7 @@
+@import './utilities';
+
+footer{
+    height: 17vh;
+    background: #051920;
+    @include flexCenter;
+}
