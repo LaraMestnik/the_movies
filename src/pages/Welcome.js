@@ -3,7 +3,7 @@ import welcomeBackground from '../assets/welcomebg.jpg';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 
-console.log(welcomeBackground);
+
 
 export default function Welcome() {
     return (
