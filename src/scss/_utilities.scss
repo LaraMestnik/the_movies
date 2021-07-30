@@ -8,7 +8,6 @@
 
 .btn{
     border-radius: 3px;
-    margin: 0 .5rem;
 }
 
 .btn-primary{
@@ -35,11 +34,12 @@
 }
 
 .btn-medium{
-    padding: 20px 30px;
+    padding: 11px 40px;
+    font-size: 1.1rem;
 }
 
 .btn-large{
-    padding: 19px 70px;
-    font-size: 1.8rem;
+    padding: 16px 60px;
+    font-size: 1.6rem;
     text-transform: uppercase;
 }

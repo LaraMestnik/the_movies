@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap");
 .btn {
   border-radius: 3px;
-  margin: 0 0.5rem;
 }
 
 .btn-primary {
@@ -29,12 +28,13 @@
 }
 
 .btn-medium {
-  padding: 20px 30px;
+  padding: 11px 40px;
+  font-size: 1.1rem;
 }
 
 .btn-large {
-  padding: 19px 70px;
-  font-size: 1.8rem;
+  padding: 16px 60px;
+  font-size: 1.6rem;
   text-transform: uppercase;
 }
 
@@ -62,7 +62,6 @@
 
 .btn {
   border-radius: 3px;
-  margin: 0 0.5rem;
 }
 
 .btn-primary {
@@ -90,12 +89,13 @@
 }
 
 .btn-medium {
-  padding: 20px 30px;
+  padding: 11px 40px;
+  font-size: 1.1rem;
 }
 
 .btn-large {
-  padding: 19px 70px;
-  font-size: 1.8rem;
+  padding: 16px 60px;
+  font-size: 1.6rem;
   text-transform: uppercase;
 }
 
@@ -131,7 +131,6 @@
 
 .btn {
   border-radius: 3px;
-  margin: 0 0.5rem;
 }
 
 .btn-primary {
@@ -159,18 +158,18 @@
 }
 
 .btn-medium {
-  padding: 20px 30px;
+  padding: 11px 40px;
+  font-size: 1.1rem;
 }
 
 .btn-large {
-  padding: 19px 70px;
-  font-size: 1.8rem;
+  padding: 16px 60px;
+  font-size: 1.6rem;
   text-transform: uppercase;
 }
 
 .btn {
   border-radius: 3px;
-  margin: 0 0.5rem;
 }
 
 .btn-primary {
@@ -198,12 +197,13 @@
 }
 
 .btn-medium {
-  padding: 20px 30px;
+  padding: 11px 40px;
+  font-size: 1.1rem;
 }
 
 .btn-large {
-  padding: 19px 70px;
-  font-size: 1.8rem;
+  padding: 16px 60px;
+  font-size: 1.6rem;
   text-transform: uppercase;
 }
 
@@ -217,7 +217,6 @@ footer {
 
 .btn {
   border-radius: 3px;
-  margin: 0 0.5rem;
 }
 
 .btn-primary {
@@ -245,12 +244,13 @@ footer {
 }
 
 .btn-medium {
-  padding: 20px 30px;
+  padding: 11px 40px;
+  font-size: 1.1rem;
 }
 
 .btn-large {
-  padding: 19px 70px;
-  font-size: 1.8rem;
+  padding: 16px 60px;
+  font-size: 1.6rem;
   text-transform: uppercase;
 }
 
@@ -269,6 +269,34 @@ footer {
 #register #right {
   width: 50vw;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #051920;
+}
+
+form {
+  width: 70%;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin-bottom: 5px;
+  color: #a3adb5;
+}
+
+form input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: #e4f2fc;
+  border-radius: 3px;
+  padding: 5px 5px;
+  margin-bottom: 15px;
 }
 
 body {

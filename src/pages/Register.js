@@ -1,5 +1,6 @@
 import React from 'react';
 import registerBg from '../assets/signupbg.jpg';
+import Form from '../components/Form';
 
 console.log(registerBg);
 
@@ -10,7 +11,7 @@ export default function Register() {
 
             </section>
             <section id="right">
-
+                <Form />
             </section>
         </main>
     )
