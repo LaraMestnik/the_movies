@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export default function Form() {
+export default function Form({ register }) {
 
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
@@ -10,10 +10,12 @@ export default function Form() {
 
     return (
         <form>
-            <div>
-                <label htmlFor="name">Name</label>
-                <input type="text" name="name" id="name" value={name} onChange={e => setName(e.target.value)} />
-            </div>
+            {register &&
+                <div>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" name="name" id="name" value={name} onChange={e => setName(e.target.value)} />
+                </div>
+            }
 
             <div>
                 <label htmlFor="email">Email</label>
@@ -25,13 +27,15 @@ export default function Form() {
                 <input type="password" name="password" id="password" value={password} onChange={e => setPassword(e.target.value)} />
             </div>
 
-            <div>
-                <label htmlFor="confirm password">Confirm password</label>
-                <input type="password" name="confirm password" id="name" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
-            </div>
+            {register &&
+                <div>
+                    <label htmlFor="confirm password">Confirm password</label>
+                    <input type="password" name="confirm password" id="confirm password" value={confirmPassword} onChange={e => setConfirmPassword(e.target.value)} />
+                </div>
+            }
 
 
-            <button className="btn btn-primary btn-medium" type="submit">Submit</button>
+            <button style={{ marginTop: '.4rem' }} className="btn btn-primary btn-medium" type="submit">Submit</button>
         </form>
     )
 }

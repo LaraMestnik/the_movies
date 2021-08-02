@@ -1,6 +1,6 @@
 @import './utilities';
 
-#register{
+#login{
     @include flexCenter;
 
     .left{
@@ -21,8 +21,7 @@
             @include flexCenter;
         }
         &__down{
-            margin: -8rem 0 0 7.2rem;
+            margin: -13rem 0 0 7.2rem;
         }
     }
 }
-

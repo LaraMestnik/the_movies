@@ -259,20 +259,92 @@ footer {
   justify-content: center;
   align-items: center;
 }
-#register #left {
+#register .left {
   width: 50vw;
   height: 100vh;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#register #right {
+#register .right {
   width: 50vw;
   height: 100vh;
+  background: #051920;
+}
+#register .right__up {
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#register .right__down {
+  margin: -8rem 0 0 7.2rem;
+}
+
+.btn {
+  border-radius: 3px;
+}
+
+.btn-primary {
+  background-color: #f4d35e;
+  color: #051920;
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #e4f2fc;
+  border: 1px solid #e4f2fc;
+}
+.btn-secondary:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.btn-small {
+  padding: 7px 17px;
+}
+
+.btn-medium {
+  padding: 11px 40px;
+  font-size: 1.1rem;
+}
+
+.btn-large {
+  padding: 16px 60px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+#login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login .left {
+  width: 50vw;
+  height: 100vh;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#login .right {
+  width: 50vw;
+  height: 100vh;
   background: #051920;
+}
+#login .right__up {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#login .right__down {
+  margin: -13rem 0 0 7.2rem;
 }
 
 form {
