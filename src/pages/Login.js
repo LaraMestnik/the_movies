@@ -1,11 +1,26 @@
 import React, { useState } from 'react';
 import registerBg from '../assets/signupbg.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
+import { auth } from '../firebase';
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
+    const history = useHistory();
+
+    function handleLogIn(e) {
+        e.preventDefault();
+
+        auth.signInWithEmailAndPassword(email, password).then((userCredentials) => {
+            console.log(userCredentials.user.email);
+        });
+
+        setEmail('');
+        setPassword('');
+
+        history.push("/dashboard");
+
+    }
 
     return (
         <main id="login">
@@ -14,8 +29,7 @@ export default function Login() {
             </section>
             <section className="right">
                 <div className="right__up">
-                    <form>
-                        <p style={{ color: '#fff' }}>{error}</p>
+                    <form onSubmit={handleLogIn}>
                         <div>
                             <label htmlFor="email">Email</label>
                             <input type="email" name="email" id="email" value={email} onChange={e => setEmail(e.target.value)} />
