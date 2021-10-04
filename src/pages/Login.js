@@ -11,9 +11,7 @@ export default function Login() {
     function handleLogIn(e) {
         e.preventDefault();
 
-        auth.signInWithEmailAndPassword(email, password).then((userCredentials) => {
-            console.log(userCredentials.user.email);
-        });
+        auth.signInWithEmailAndPassword(email, password);
 
         setEmail('');
         setPassword('');
