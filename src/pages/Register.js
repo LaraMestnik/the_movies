@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import registerBg from '../assets/signupbg.jpg';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../firebase';
 
 
@@ -10,6 +10,7 @@ export default function Register() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
+    const history = useHistory();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -27,6 +28,8 @@ export default function Register() {
         setEmail('');
         setPassword('');
         setConfirmPassword('');
+
+        history.push("/dashboard")
 
     }
 

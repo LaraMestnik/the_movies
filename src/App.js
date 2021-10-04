@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
+import Dashboard from './pages/Dashboard';
 
 export default function App() {
 
@@ -16,6 +17,9 @@ export default function App() {
             </Route>
             <Route path="/login">
                 <Login />
+            </Route>
+            <Route path="/dashboard">
+                <Dashboard />
             </Route>
         </Switch>
     )
