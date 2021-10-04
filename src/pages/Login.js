@@ -7,10 +7,10 @@ export default function Login() {
 
     return (
         <main id="login">
-            <section class="left" style={{ backgroundImage: `url(${registerBg})` }}>
+            <section className="left" style={{ backgroundImage: `url(${registerBg})` }}>
 
             </section>
-            <section class="right">
+            <section className="right">
                 <div className="right__up">
                     <Form />
                 </div>

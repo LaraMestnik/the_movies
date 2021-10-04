@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { auth } from '../firebase';
 
 export default function Form({ register }) {
 
@@ -7,9 +8,27 @@ export default function Form({ register }) {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
+    const [passMatchError, setPassMatchError] = useState(false);
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        if (password !== confirmPassword) {
+            setPassMatchError(true);
+        }
+        //console.log(auth.createUserWithEmailAndPassword);
+        //console.log(email, password);
+        //register the user
+        //auth.createUserWithEmailAndPassword(email, password).then(userCredential => {
+        //    console.log(userCredential.user);
+        //}).catch(err => console.log(err))
+        auth.createUserWithEmailAndPassword(email, password).then(user => console.log(user.email));
+
+    }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
+            {passMatchError && <p> Passwords do not match! </p>}
             {register &&
                 <div>
                     <label htmlFor="name">Name</label>
