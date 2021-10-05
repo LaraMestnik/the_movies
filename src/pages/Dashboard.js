@@ -6,7 +6,11 @@ export default function Dashboard() {
     const history = useHistory();
     const [user, setUser] = useState();
 
-    auth.onAuthStateChanged(user => user && setUser(user.email));
+    auth.onAuthStateChanged(user => {
+        if (user) {
+            setUser(user);
+        }
+    });
 
     function handleLogOut(e) {
         e.preventDefault();
