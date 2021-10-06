@@ -7,9 +7,7 @@ export default function Dashboard() {
     const [user, setUser] = useState();
 
     auth.onAuthStateChanged(user => {
-        if (user) {
-            setUser(user);
-        }
+        setUser(user.email);
     });
 
     function handleLogOut(e) {
