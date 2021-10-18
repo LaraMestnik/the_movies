@@ -21,6 +21,7 @@ export default function App() {
             <Route path="/dashboard">
                 <Dashboard />
             </Route>
+            <Route>404 page</Route>
         </Switch>
     )
 }

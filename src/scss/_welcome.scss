@@ -4,6 +4,7 @@
 .welcome {
     position: relative;
     @include flexCenter;
+    flex-direction: column;
     &--bg{
       height: 100vh;
       background-position: center bottom;
@@ -11,8 +12,8 @@
       background-size: cover;
     }
     &__title{
-      margin-top: -4rem;
-      margin-bottom: 2rem;
+      margin-top: -16rem;
+      margin-bottom: 1rem;
       text-transform: capitalize;
       color: #e4f2fc;;
       font-size: $h1HeadingSize;
@@ -28,6 +29,12 @@
         letter-spacing: 4px;
       }
     }
+}
+
+#trendingMovies{
+  background:#051920;
+  height: 100px;
+  width: 100%;
 }
  
 

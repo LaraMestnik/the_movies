@@ -16,6 +16,7 @@ export default function Dashboard() {
         history.push("/login");
     }
 
+
     return (
         <div>
             <h1>Dashboard</h1>
