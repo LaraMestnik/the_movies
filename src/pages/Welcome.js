@@ -8,7 +8,7 @@ import useFetch from '../custom hooks/useFetch';
 
 export default function Welcome() {
     const APIkey = process.env.REACT_APP_TMDB_API_KEY;
-    const { data, loading } = useFetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${APIkey}`);
+    const { data } = useFetch(`https://api.themoviedb.org/3/trending/movie/day?api_key=${APIkey}`);
     console.log(data);
 
     return (

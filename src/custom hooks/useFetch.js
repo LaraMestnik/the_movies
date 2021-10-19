@@ -5,27 +5,27 @@ export default function useFetch(url) {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
 
-    async function getData() {
-        setLoading(true);
-        try {
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw Error('Could not get the data');
-            }
-            const data = await response.json();
-            setLoading(false);
-            data && setData(data);
-        } catch (error) {
-            setLoading(false);
-            setError(error.message);
-            console.log(error.message);
-        }
-
-    }
 
     useEffect(() => {
+        async function getData() {
+            setLoading(true);
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw Error('Could not get the data');
+                }
+                const data = await response.json();
+                setLoading(false);
+                data && setData(data);
+            } catch (error) {
+                setLoading(false);
+                setError(error.message);
+                console.log(error.message);
+            }
+
+        }
         getData();
-    }, [url])
+    }, [url]);
 
 
     return { data, loading, error };
