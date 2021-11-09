@@ -6,6 +6,8 @@
 @use 'register';
 @use 'login';
 @use 'form';
+@use 'singlemoviecard';
+@use 'trending';
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap');
 
@@ -14,4 +16,5 @@ body{
     min-height: 100vh;
     font-family: 'Source Sans Pro', sans-serif;
     color: #e4f2fc;
+    overflow-x: hidden;
 }

@@ -46,6 +46,7 @@
   background: #051920;
   margin: auto;
   height: 10vh;
+  width: 100vw;
 }
 #nav #logo {
   text-transform: uppercase;
@@ -100,20 +101,22 @@
 }
 
 .welcome {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.welcome--bg {
-  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  height: 70vh;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.welcome__heading {
+  text-align: center;
+}
 .welcome__title {
-  margin-top: -16rem;
+  margin-top: -16px;
   margin-bottom: 1rem;
   text-transform: capitalize;
   color: #e4f2fc;
@@ -121,19 +124,13 @@
   width: 40vw;
   text-align: center;
 }
-.welcome__title__subtitle {
+.welcome__subtitle {
   text-align: center;
   display: block;
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 200;
   letter-spacing: 4px;
-}
-
-#trendingMovies {
-  background: #051920;
-  height: 100px;
-  width: 100%;
 }
 
 .btn {
@@ -216,6 +213,7 @@
 
 footer {
   height: 17vh;
+  width: 100vw;
   background: #051920;
   display: flex;
   justify-content: center;
@@ -378,10 +376,102 @@ form input {
   margin-bottom: 15px;
 }
 
+.movie-card {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.movie-poster {
+  height: 260px;
+  width: 190px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.movie-title {
+  background: transparent;
+  width: 200px;
+  height: 70px;
+  margin-top: 10px;
+}
+
+.movie-title p {
+  font-weight: 200;
+}
+
+.btn {
+  border-radius: 3px;
+}
+
+.btn-primary {
+  background-color: #f4d35e;
+  color: #051920;
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #e4f2fc;
+  border: 1px solid #e4f2fc;
+}
+.btn-secondary:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.btn-small {
+  padding: 7px 17px;
+}
+
+.btn-medium {
+  padding: 11px 40px;
+  font-size: 1.1rem;
+}
+
+.btn-large {
+  padding: 16px 60px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.trending-movies-title {
+  background: #041217;
+  padding: 10px 10px 5px 24px;
+}
+
+.trending-movies {
+  background: #041217;
+  height: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  width: 100vw;
+}
+.trending-movies__scroll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  margin: 10px 0px;
+}
+.trending-movies__scroll:first-child {
+  margin-left: 20px;
+}
+.trending-movies__scroll:last-child {
+  margin-right: 20px;
+}
+
 body {
   min-height: 100vh;
   font-family: "Source Sans Pro", sans-serif;
   color: #e4f2fc;
+  overflow-x: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

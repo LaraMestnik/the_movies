@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Welcome from './Welcome';
 import Footer from '../components/Footer';
+import TrendingMovies from '../components/TrendingMovies';
 
 export default function Home() {
 
@@ -9,6 +10,7 @@ export default function Home() {
         <main>
             <Navbar />
             <Welcome />
+            <TrendingMovies />
             <Footer />
         </main>
     )

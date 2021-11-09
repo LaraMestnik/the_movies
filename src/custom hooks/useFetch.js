@@ -14,9 +14,9 @@ export default function useFetch(url) {
                 if (!response.ok) {
                     throw Error('Could not get the data');
                 }
-                const data = await response.json();
+                const responseData = await response.json();
                 setLoading(false);
-                data && setData(data);
+                setData(responseData);
             } catch (error) {
                 setLoading(false);
                 setError(error.message);
@@ -27,6 +27,23 @@ export default function useFetch(url) {
         getData();
     }, [url]);
 
+    async function getData() {
+        setLoading(true);
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+                throw Error('Could not get the data');
+            }
+            const responseData = await response.json();
+            setLoading(false);
+            setData(responseData);
+        } catch (error) {
+            setLoading(false);
+            setError(error.message);
+        }
 
-    return { data, loading, error };
+    }
+
+
+    return { data, loading, error, getData };
 }

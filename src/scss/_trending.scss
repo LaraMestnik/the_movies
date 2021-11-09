@@ -1,0 +1,26 @@
+@import './utilities';
+
+.trending-movies-title{
+    background: #041217;
+    padding: 10px 10px 5px 24px;
+}
+
+.trending-movies{
+    background: #041217;
+    height: auto;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    width: 100vw;
+    &__scroll{
+        @include flexCenter;
+        height: 350px;
+        margin: 10px 0px;
+        &:first-child{
+          margin-left: 20px;
+        }
+        &:last-child{
+          margin-right: 20px;
+        }
+      }
+}
