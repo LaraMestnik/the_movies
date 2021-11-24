@@ -12,11 +12,12 @@ export default function useFetch(url) {
             try {
                 const response = await fetch(url);
                 if (!response.ok) {
-                    throw Error('Could not get the data');
+                    throw new Error(response.statusText);
                 }
                 const responseData = await response.json();
                 setLoading(false);
                 setData(responseData);
+                setError(null);
             } catch (error) {
                 setLoading(false);
                 setError(error.message);

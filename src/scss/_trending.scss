@@ -24,3 +24,16 @@
         }
       }
 }
+.trending-movies::-webkit-scrollbar{
+  width: 5px;
+  height: 5px;
+}
+
+.trending-movies::-webkit-scrollbar-track{
+  background: #051920;
+}
+
+.trending-movies::-webkit-scrollbar-thumb{
+  background:#f4d35e;
+  border-radius: 10px;
+}

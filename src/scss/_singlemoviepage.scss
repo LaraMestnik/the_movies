@@ -1,0 +1,42 @@
+@import './utilities';
+
+.movie-page{
+    background: #051920;
+    min-height: 100vh;
+    @include flexCenter;
+   
+    &__content{
+        width: 60vw;
+        border-radius: 5px;
+        background:#041217;
+        display: flex;
+
+        .movie-poster{
+                height: 450px;
+                width: 300px;
+                margin: 30px 40px 30px 60px;
+                flex-shrink: 0;
+        }
+
+        .movie-info{
+            padding-right: 35px;
+
+            h3{
+                margin-top: 70px;
+                font-size: 30px;
+            }
+
+            .release-year{
+                font-size: 20px;
+                margin-bottom: 20px;
+            };
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 1200px){
+}
+
+

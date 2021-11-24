@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import SingleMoviePage from './pages/SingleMoviePage';
 
 export default function App() {
 
@@ -20,6 +21,9 @@ export default function App() {
             </Route>
             <Route path="/dashboard">
                 <Dashboard />
+            </Route>
+            <Route path="/movie">
+                <SingleMoviePage />
             </Route>
             <Route>404 page</Route>
         </Switch>
