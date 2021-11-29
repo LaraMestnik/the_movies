@@ -1,24 +1,31 @@
 .movie-card{
     margin: 0 5px;
     cursor: pointer;
+
+    :hover{
+        transform:scale(1.02);
+        transition: all .24s ease;
+    }
+
+    &__poster{
+        height:260px;
+        width:190px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position:center;
+        border-radius: 5px;
+    }
+
+    &__title{
+        background: transparent;
+        width: 200px;
+        height: 70px;
+        margin-top: 10px;
+
+        p{
+            font-weight: 200;
+        }
+    }
 }
 
-.movie-poster{
-    height:260px;
-    width:190px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position:center;
-    border-radius: 5px;
-}
 
-.movie-title{
-    background: transparent;
-    width: 200px;
-    height: 70px;
-    margin-top: 10px;
-}
-
-.movie-title p{
-    font-weight: 200;
-}

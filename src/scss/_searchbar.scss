@@ -1,0 +1,14 @@
+.search-bar{
+    width: 30%;
+
+    input[type=text]{
+        background: transparent;
+        border-bottom: 1px solid rgba(228, 242, 252, .5);
+        height: 30px;
+        margin: 0px;
+        border-radius:0;
+        outline: none;
+        color: #e4f2fc;
+        font-family: 'Source Sans Pro', sans-serif;
+    }
+}

@@ -380,8 +380,11 @@ form input {
   margin: 0 5px;
   cursor: pointer;
 }
-
-.movie-poster {
+.movie-card :hover {
+  transform: scale(1.02);
+  transition: all 0.24s ease;
+}
+.movie-card__poster {
   height: 260px;
   width: 190px;
   background-size: cover;
@@ -389,15 +392,13 @@ form input {
   background-position: center;
   border-radius: 5px;
 }
-
-.movie-title {
+.movie-card__title {
   background: transparent;
   width: 200px;
   height: 70px;
   margin-top: 10px;
 }
-
-.movie-title p {
+.movie-card__title p {
   font-weight: 200;
 }
 
@@ -549,6 +550,20 @@ form input {
 .movie-page__content .movie-info .release-year {
   font-size: 20px;
   margin-bottom: 20px;
+}
+
+.search-bar {
+  width: 30%;
+}
+.search-bar input[type=text] {
+  background: transparent;
+  border-bottom: 1px solid rgba(228, 242, 252, 0.5);
+  height: 30px;
+  margin: 0px;
+  border-radius: 0;
+  outline: none;
+  color: #e4f2fc;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 body {
