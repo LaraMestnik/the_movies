@@ -5,6 +5,7 @@ import Register from './pages/Register';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import SingleMoviePage from './pages/SingleMoviePage';
+import SearchMovieResults from './pages/SearchMovieResults';
 
 export default function App() {
 
@@ -22,8 +23,11 @@ export default function App() {
             <Route path="/dashboard">
                 <Dashboard />
             </Route>
-            <Route path="/movie">
+            <Route exact path="/movie">
                 <SingleMoviePage />
+            </Route>
+            <Route path="/movieresults">
+                <SearchMovieResults />
             </Route>
             <Route>404 page</Route>
         </Switch>

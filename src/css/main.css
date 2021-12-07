@@ -396,7 +396,7 @@ form input {
   background: transparent;
   width: 200px;
   height: 70px;
-  margin-top: 10px;
+  margin: 10px 0 30px 0;
 }
 .movie-card__title p {
   font-weight: 200;
@@ -539,6 +539,10 @@ form input {
   width: 300px;
   margin: 30px 40px 30px 60px;
   flex-shrink: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
 }
 .movie-page__content .movie-info {
   padding-right: 35px;
@@ -564,6 +568,23 @@ form input {
   outline: none;
   color: #e4f2fc;
   font-family: "Source Sans Pro", sans-serif;
+}
+
+.search-movie-results {
+  background: #051920;
+}
+.search-movie-results .search-movie-title {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.search-movie-results__container {
+  background: #041217;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 50px;
 }
 
 body {

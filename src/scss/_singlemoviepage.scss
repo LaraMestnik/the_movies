@@ -16,6 +16,10 @@
                 width: 300px;
                 margin: 30px 40px 30px 60px;
                 flex-shrink: 0;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position:center;
+                border-radius: 5px;
         }
 
         .movie-info{

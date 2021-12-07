@@ -1,0 +1,18 @@
+.search-movie-results{
+    background: #051920;
+
+    .search-movie-title{
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+
+    &__container{
+        background: #041217;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 40px 50px;
+    }
+}
