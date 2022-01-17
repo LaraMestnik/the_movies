@@ -11,7 +11,7 @@ export default function Navbar() {
             </div>
             <SearchBar />
             <div className="btn-container">
-                <Link to="/login"><Button btnText="Log In" /></Link>
+                <Link to="/login"><Button className="btn-secondary btn-small">Log In</Button></Link>
             </div>
         </nav>
     )

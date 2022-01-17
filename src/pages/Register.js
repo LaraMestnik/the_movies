@@ -21,6 +21,7 @@ export default function Register() {
 
         auth.createUserWithEmailAndPassword(email, password).then((userCredential) => {
             console.log(userCredential.user);
+            //history.push("/dashboard")
         }).catch((error) => {
             console.log(error.code, error.message);
         })
@@ -29,7 +30,7 @@ export default function Register() {
         setPassword('');
         setConfirmPassword('');
 
-        history.push("/dashboard")
+
 
     }
 

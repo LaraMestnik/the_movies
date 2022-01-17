@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Welcome from './Welcome';
+import Welcome from '../components/Welcome';
 import Footer from '../components/Footer';
 import TrendingMovies from '../components/TrendingMovies';
 
