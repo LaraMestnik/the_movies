@@ -13,7 +13,7 @@
     overflow-x: scroll;
     width: 100vw;
     &__scroll{
-        @include flexCenter;
+        @include flexCenter(row, center, center);
         height: 350px;
         margin: 10px 0px;
         &:first-child{

@@ -1,5 +1,7 @@
 .search-movie-results{
     background: #051920;
+    min-height: 100vh;
+    overflow-y: auto;
 
     .search-movie-title{
         max-width: 960px;

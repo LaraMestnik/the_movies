@@ -38,21 +38,28 @@
   text-transform: uppercase;
 }
 
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 #nav {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   background: #051920;
   margin: auto;
   height: 10vh;
   width: 100vw;
-}
-#nav #logo {
-  text-transform: uppercase;
-}
-#nav #logo h1 {
-  font-size: 2rem;
 }
 
 * {
@@ -100,11 +107,24 @@
   text-transform: uppercase;
 }
 
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 .welcome {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   overflow: hidden;
   width: 100vw;
   height: 70vh;
@@ -172,6 +192,19 @@
   text-transform: uppercase;
 }
 
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 .btn {
   border-radius: 3px;
 }
@@ -211,11 +244,25 @@
   text-transform: uppercase;
 }
 
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 footer {
   height: 17vh;
   width: 100vw;
   background: #051920;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -259,8 +306,22 @@ footer {
   text-transform: uppercase;
 }
 
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 #register {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -279,6 +340,7 @@ footer {
 #register .right__up {
   height: 90vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -325,8 +387,22 @@ footer {
   text-transform: uppercase;
 }
 
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 #login {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -345,6 +421,7 @@ footer {
 #login .right__up {
   height: 90vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -441,6 +518,19 @@ form input {
   text-transform: uppercase;
 }
 
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 .trending-movies-title {
   background: #041217;
   padding: 10px 10px 5px 24px;
@@ -456,6 +546,7 @@ form input {
 }
 .trending-movies__scroll {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 350px;
@@ -521,10 +612,33 @@ form input {
   text-transform: uppercase;
 }
 
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 .movie-page {
   background: #051920;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
+  justify-content: none;
+  align-items: none;
+}
+.movie-page--up {
+  height: 20vh;
+}
+.movie-page--down {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -572,6 +686,8 @@ form input {
 
 .search-movie-results {
   background: #051920;
+  min-height: 100vh;
+  overflow-y: auto;
 }
 .search-movie-results .search-movie-title {
   max-width: 960px;
@@ -592,6 +708,10 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   color: #e4f2fc;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
 }
 
 ::-webkit-scrollbar {

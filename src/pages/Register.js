@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import registerBg from '../assets/signupbg.jpg';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../firebase';
+import Logo from '../components/Logo';
 
 
 export default function Register() {
@@ -38,7 +39,7 @@ export default function Register() {
     return (
         <main id="register">
             <section className="left" style={{ backgroundImage: `url(${registerBg})` }}>
-
+                <Logo className="logo--dark" />
             </section>
             <section className="right">
                 <div className="right__up">

@@ -2,8 +2,7 @@
 @import './variables';
 
 .welcome {
-    @include flexCenter;
-    flex-direction: column;
+    @include flexCenter(column, center, center);
     overflow: hidden;
     width: 100vw;
     height: 70vh;

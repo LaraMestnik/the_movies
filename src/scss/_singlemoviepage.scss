@@ -3,7 +3,13 @@
 .movie-page{
     background: #051920;
     min-height: 100vh;
-    @include flexCenter;
+    @include flexCenter(column, none, none);
+    &--up{
+        height: 20vh;
+    }
+    &--down{
+        @include flexCenter(column, center, center);
+    }
    
     &__content{
         width: 60vw;

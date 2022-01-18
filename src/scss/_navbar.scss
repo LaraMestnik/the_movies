@@ -1,18 +1,10 @@
 @import './utilities';
 
 #nav{
-    @include flexCenter;
-    justify-content: space-around;
+    @include flexCenter(row, space-around, center);
     background: #051920;
     margin: auto;
     height: 10vh;
     width: 100vw;
-    #logo{
-        text-transform: uppercase;
-        h1{
-            font-size: 2rem;
-        }
-    }
 
-    
 }

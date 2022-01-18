@@ -1,7 +1,7 @@
 @import './utilities';
 
 #login{
-    @include flexCenter;
+    @include flexCenter(row, center, center);
 
     .left{
         width: 50vw;
@@ -18,7 +18,7 @@
 
         &__up{
             height: 90vh;
-            @include flexCenter;
+            @include flexCenter(column, center, center);
         }
         &__down{
             margin: -13rem 0 0 7.2rem;

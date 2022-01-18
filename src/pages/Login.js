@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import registerBg from '../assets/signupbg.jpg';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../firebase';
+import Logo from '../components/Logo';
 
 export default function Login() {
     const [email, setEmail] = useState("");
@@ -23,7 +24,7 @@ export default function Login() {
     return (
         <main id="login">
             <section className="left" style={{ backgroundImage: `url(${registerBg})` }}>
-
+                <Logo className="logo--dark" />
             </section>
             <section className="right">
                 <div className="right__up">

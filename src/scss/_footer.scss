@@ -4,5 +4,5 @@ footer{
     height: 17vh;
     width: 100vw;
     background: #051920;
-    @include flexCenter;
+    @include flexCenter(row, center, center);
 }
