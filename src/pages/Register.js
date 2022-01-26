@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import registerBg from '../assets/signupbg.jpg';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../firebase';
@@ -11,7 +11,13 @@ export default function Register() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [error, setError] = useState("");
+    const [loading, setLoading] = useState("");
+    const nameRef = useRef();
     const history = useHistory();
+
+    useEffect(() => {
+        nameRef.current.focus();
+    }, [])
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -26,13 +32,13 @@ export default function Register() {
         }).catch((error) => {
             console.log(error.code, error.message);
         })
+
         setName('');
         setEmail('');
         setPassword('');
         setConfirmPassword('');
 
-
-
+        history.push('/dashboard');
     }
 
 
@@ -47,7 +53,7 @@ export default function Register() {
                         <p style={{ color: '#fff' }}>{error}</p>
                         <div>
                             <label htmlFor="name">Name</label>
-                            <input type="text" name="name" id="name" value={name} onChange={e => setName(e.target.value)} />
+                            <input type="text" ref={nameRef} name="name" id="name" value={name} onChange={e => setName(e.target.value)} />
                         </div>
 
                         <div>

@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { auth } from '../firebase';
+import React, { useContext } from 'react';
 import { useHistory } from 'react-router-dom';
+import Navbar from '../components/Navbar';
+import { GlobalContext } from '../context/GlobalState';
+import { auth } from '../firebase';
+
 
 export default function Dashboard() {
     const history = useHistory();
-    const [user, setUser] = useState();
+    const user = useContext(GlobalContext);
 
-    auth.onAuthStateChanged(user => {
-        console.log(user);
-        user && setUser(user.email);
-    });
+    user && console.log(user);
 
     function handleLogOut(e) {
         e.preventDefault();
@@ -20,9 +20,10 @@ export default function Dashboard() {
 
     return (
         <div>
+            <Navbar />
             <h1>Dashboard</h1>
             <button onClick={handleLogOut}>Log Out</button>
-            <h3>Hello, {user}</h3>
+            <h3>Hello, {user && user.email}</h3>
         </div>
     )
 }

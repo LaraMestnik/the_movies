@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import registerBg from '../assets/signupbg.jpg';
 import { Link, useHistory } from 'react-router-dom';
 import { auth } from '../firebase';
@@ -7,7 +7,12 @@ import Logo from '../components/Logo';
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const emailRef = useRef();
     const history = useHistory();
+
+    useEffect(() => {
+        emailRef.current.focus();
+    }, [])
 
     function handleLogIn(e) {
         e.preventDefault();
@@ -31,7 +36,7 @@ export default function Login() {
                     <form onSubmit={handleLogIn}>
                         <div>
                             <label htmlFor="email">Email</label>
-                            <input type="email" name="email" id="email" value={email} onChange={e => setEmail(e.target.value)} />
+                            <input type="email" ref={emailRef} name="email" id="email" value={email} onChange={e => setEmail(e.target.value)} />
                         </div>
 
                         <div>
