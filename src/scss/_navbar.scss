@@ -7,4 +7,11 @@
     height: 10vh;
     width: 100vw;
 
+    .logout{
+        @include flexCenter(row, center, center);
+
+        & >:first-child {
+            margin-right: 10px;
+        }
+    }
 }

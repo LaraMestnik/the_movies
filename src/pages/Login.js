@@ -1,28 +1,27 @@
 import React, { useState, useRef, useEffect } from 'react';
 import registerBg from '../assets/signupbg.jpg';
-import { Link, useHistory } from 'react-router-dom';
-import { auth } from '../firebase';
+import { Link } from 'react-router-dom';
 import Logo from '../components/Logo';
+import useLogin from '../custom hooks/useLogin';
 
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const { login, error, loading } = useLogin();
+
     const emailRef = useRef();
-    const history = useHistory();
 
     useEffect(() => {
         emailRef.current.focus();
     }, [])
 
-    function handleLogIn(e) {
+    async function handleLogIn(e) {
         e.preventDefault();
 
-        auth.signInWithEmailAndPassword(email, password);
+        login(email, password);
 
         setEmail('');
         setPassword('');
-
-        history.push("/dashboard");
 
     }
 
@@ -34,6 +33,7 @@ export default function Login() {
             <section className="right">
                 <div className="right__up">
                     <form onSubmit={handleLogIn}>
+                        {loading && <p>Loading</p>}
                         <div>
                             <label htmlFor="email">Email</label>
                             <input type="email" ref={emailRef} name="email" id="email" value={email} onChange={e => setEmail(e.target.value)} />
@@ -43,12 +43,13 @@ export default function Login() {
                             <label htmlFor="password">Password</label>
                             <input type="password" name="password" id="password" value={password} onChange={e => setPassword(e.target.value)} />
                         </div>
+                        {error && <p>{error}</p>}
 
-                        <button style={{ marginTop: '.4rem' }} className="btn btn-primary btn-medium" type="submit">Log In</button>
+                        <button style={{ marginTop: '.4rem' }} className="btn btn-primary btn-medium" type="submit" disabled={loading}>Log In</button>
                     </form>
                 </div>
                 <div className="right__down">
-                    <p>Don't have an account yet? <Link to="/register">Register</Link></p>
+                    <p>Don't have an account yet? <Link to="/signup">Sign Up</Link></p>
                 </div>
             </section>
         </main>

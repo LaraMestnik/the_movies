@@ -1,10 +1,9 @@
-import { useState } from 'react';
 import { useLocation } from "react-router-dom";
 import Logo from '../components/Logo';
 
 export default function SingleMoviePage() {
     const location = useLocation();
-    const [movie, setMovie] = useState(location.state.movie);
+    const movie = location.state.movie;
     console.log(movie);
 
     return (

@@ -1,9 +1,9 @@
 @import './utilities';
 
-#register{
+.signup{
     @include flexCenter(row, center, center);
 
-    .left{
+    &__left{
         width: 50vw;
         height: 100vh;
         background-position: center bottom;
@@ -11,16 +11,16 @@
         background-size: cover;
     }
 
-    .right{
+    &__right{
         width: 50vw;
         height: 100vh;
         background: #051920;
 
-        &__up{
+        &-up{
             height: 90vh;
             @include flexCenter(column, center, center);
         }
-        &__down{
+        &-down{
             margin: -8rem 0 0 7.2rem;
         }
     }

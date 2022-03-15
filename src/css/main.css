@@ -61,6 +61,15 @@
   height: 10vh;
   width: 100vw;
 }
+#nav .logout {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#nav .logout > :first-child {
+  margin-right: 10px;
+}
 
 * {
   box-sizing: border-box;
@@ -319,32 +328,32 @@ footer {
   color: #051920;
 }
 
-#register {
+.signup {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-#register .left {
+.signup__left {
   width: 50vw;
   height: 100vh;
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
-#register .right {
+.signup__right {
   width: 50vw;
   height: 100vh;
   background: #051920;
 }
-#register .right__up {
+.signup__right-up {
   height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#register .right__down {
+.signup__right-down {
   margin: -8rem 0 0 7.2rem;
 }
 

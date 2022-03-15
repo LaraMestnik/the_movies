@@ -6,7 +6,6 @@ export default function SearchMovieResults() {
     const location = useLocation();
     const results = location?.state?.data?.results;
 
-    console.log(location);
 
 
     return (
