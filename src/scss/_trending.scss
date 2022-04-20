@@ -2,7 +2,7 @@
 
 .trending-movies-title{
     background: #041217;
-    padding: 10px 10px 5px 24px;
+    padding: 10px 10px 5px 10px;
 }
 
 .trending-movies{
@@ -14,7 +14,7 @@
     width: 100vw;
     &__scroll{
         @include flexCenter(row, center, center);
-        height: 350px;
+        height: 400px;
         margin: 10px 0px;
         &:first-child{
           margin-left: 20px;

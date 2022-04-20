@@ -1,12 +1,13 @@
 import { useState, useEffect } from 'react';
 import { auth } from '../firebase';
-import { useAuthContext } from './useAuthContext';
+import { useCustomContext } from './useCustomContext';
+import { AuthContext } from '../context/AuthContext';
 
 export default function useSignUp() {
     const [isCancelled, setIsCancelled] = useState(false);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
-    const { dispatch } = useAuthContext();
+    const { dispatch } = useCustomContext(AuthContext);
 
 
     async function signup(name, email, password) {

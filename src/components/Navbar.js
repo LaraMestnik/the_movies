@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/AuthContext';
 
 // custom hooks
-import { useAuthContext } from '../custom hooks/useAuthContext';
+import { useCustomContext } from '../custom hooks/useCustomContext';
 import { useLogout } from '../custom hooks/useLogout';
 
 //components
@@ -10,7 +11,7 @@ import Logo from '../components/Logo';
 import Button from './Button';
 
 export default function Navbar() {
-    const { user } = useAuthContext();
+    const { user } = useCustomContext(AuthContext);
     const { logout } = useLogout();
 
     return (

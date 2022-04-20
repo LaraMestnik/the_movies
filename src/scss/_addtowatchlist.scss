@@ -1,0 +1,7 @@
+@import './utilities';
+
+.addtowlist{
+    @include flexCenter(row, flex-start, center);
+    margin: 10px 0;
+    cursor: pointer;
+}

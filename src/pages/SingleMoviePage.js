@@ -1,9 +1,15 @@
 import { useLocation } from "react-router-dom";
+import { AuthContext } from '../context/AuthContext';
+import { useCustomContext } from '../custom hooks/useCustomContext';
+
+//components
 import Logo from '../components/Logo';
+import AddToWatchList from '../components/AddToWatchList';
 
 export default function SingleMoviePage() {
     const location = useLocation();
     const movie = location.state.movie;
+    const { user } = useCustomContext(AuthContext);
     console.log(movie);
 
     return (
@@ -21,6 +27,7 @@ export default function SingleMoviePage() {
                         <h3>{movie.title}</h3>
                         <p className='release-year'>{movie.release_date.substring(0, 4)}</p>
                         <p>{movie.overview}</p>
+                        {user && <AddToWatchList movie={movie} />}
                     </div>
                 </div>
             </section>

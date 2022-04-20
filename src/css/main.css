@@ -462,8 +462,60 @@ form input {
   margin-bottom: 15px;
 }
 
+.btn {
+  border-radius: 3px;
+}
+
+.btn-primary {
+  background-color: #f4d35e;
+  color: #051920;
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #e4f2fc;
+  border: 1px solid #e4f2fc;
+}
+.btn-secondary:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.btn-small {
+  padding: 7px 17px;
+}
+
+.btn-medium {
+  padding: 11px 40px;
+  font-size: 1.1rem;
+}
+
+.btn-large {
+  padding: 16px 60px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
 .movie-card {
-  margin: 0 5px;
+  margin: 10px 5px;
   cursor: pointer;
 }
 .movie-card :hover {
@@ -482,7 +534,7 @@ form input {
   background: transparent;
   width: 200px;
   height: 70px;
-  margin: 10px 0 30px 0;
+  margin: 10px 0 10px 0;
 }
 .movie-card__title p {
   font-weight: 200;
@@ -542,7 +594,7 @@ form input {
 
 .trending-movies-title {
   background: #041217;
-  padding: 10px 10px 5px 24px;
+  padding: 10px 10px 5px 10px;
 }
 
 .trending-movies {
@@ -558,7 +610,7 @@ form input {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 350px;
+  height: 400px;
   margin: 10px 0px;
 }
 .trending-movies__scroll:first-child {
@@ -710,6 +762,86 @@ form input {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 50px;
+}
+
+.btn {
+  border-radius: 3px;
+}
+
+.btn-primary {
+  background-color: #f4d35e;
+  color: #051920;
+  border: none;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #e4f2fc;
+  border: 1px solid #e4f2fc;
+}
+.btn-secondary:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.btn-small {
+  padding: 7px 17px;
+}
+
+.btn-medium {
+  padding: 11px 40px;
+  font-size: 1.1rem;
+}
+
+.btn-large {
+  padding: 16px 60px;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  margin-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+.logo--white {
+  color: #e4f2fc;
+}
+.logo--dark {
+  color: #051920;
+}
+
+.addtowlist {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.watchlist {
+  max-width: 1100px;
+  margin: 20px auto;
+}
+.watchlist__title {
+  color: #051920;
+  margin-bottom: 20px;
+}
+.watchlist__error {
+  color: #051920;
+  margin-bottom: 20px;
+}
+.watchlist__movies {
+  background: #051920;
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 body {

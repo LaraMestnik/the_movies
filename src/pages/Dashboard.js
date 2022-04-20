@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import WatchList from '../components/WatchList';
 
 
 export default function Dashboard() {
@@ -7,7 +8,7 @@ export default function Dashboard() {
     return (
         <div>
             <Navbar />
-            <h1>Dashboard</h1>
+            <WatchList />
         </div>
     )
 }
