@@ -16,6 +16,7 @@ import SearchMovieResults from './pages/SearchMovieResults';
 export default function App() {
     const { user, authIsReady } = useCustomContext(AuthContext);
 
+
     return (
         <>
             {authIsReady && (

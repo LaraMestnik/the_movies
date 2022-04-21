@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { projectFirestore } from '../firebase';
 import { useCustomContext } from '../custom hooks/useCustomContext';
 import { MoviesContext } from '../context/MoviesContext';
+import { AuthContext } from '../context/AuthContext';
 
 
 //components
@@ -12,11 +13,14 @@ const WatchList = () => {
     const [loading, setLoading] = useState(false);
 
     const { dispatch, error } = useCustomContext(MoviesContext);
+    const { user } = useCustomContext(AuthContext);
 
     useEffect(() => {
         setLoading(true);
 
-        const unsub = projectFirestore.collection('watchlist').onSnapshot((snapshot) => {
+        const collectionRef = projectFirestore.collection('watchlist').where("uid", "==", user.uid);
+
+        const unsub = collectionRef.onSnapshot((snapshot) => {
             if (snapshot.empty) {
                 dispatch({ type: 'ERROR', payload: 'There are no movies in your watchlist' });
                 setLoading(false);

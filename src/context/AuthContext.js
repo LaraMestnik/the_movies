@@ -22,6 +22,8 @@ export function authReducer(state, action) {
   }
 }
 
+console.log('user', initialState.user);
+
 export default function AuthContextProvider({ children }) {
   const [state, dispatch] = useReducer(authReducer, initialState);
 
@@ -31,6 +33,8 @@ export default function AuthContextProvider({ children }) {
       unsub();
     })
   }, [])
+
+
 
   return (
     <AuthContext.Provider value={{ ...state, dispatch }}>

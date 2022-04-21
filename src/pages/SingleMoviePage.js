@@ -10,7 +10,7 @@ export default function SingleMoviePage() {
     const location = useLocation();
     const movie = location.state.movie;
     const { user } = useCustomContext(AuthContext);
-    console.log(movie);
+    console.log(movie, user);
 
     return (
         <div className="movie-page">

@@ -2,6 +2,7 @@ import { createContext, useReducer, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { projectFirestore } from '../firebase';
 
+
 export const MoviesContext = createContext();
 
 const initialState = {
@@ -26,6 +27,7 @@ const MoviesContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(moviesReducer, initialState);
     const history = useHistory();
 
+
     console.log('movie array', state);
     useEffect(() => {
         let dbwatchlist = [];
@@ -37,7 +39,7 @@ const MoviesContextProvider = ({ children }) => {
         });
     }, []);
 
-    const addToWatchList = async (movie) => {
+    const addToWatchList = async (movie, userId) => {
 
         const alreadyInWatchlist = state.watchlist.map(movie => {
             return movie.id;
@@ -47,10 +49,10 @@ const MoviesContextProvider = ({ children }) => {
             dispatch({ type: 'ERROR', payload: 'This movie is already in your watchlist' })
             history.push('/dashboard');
         } else {
-            dispatch({ type: 'ADD_TO_WATCHLIST', payload: movie });
+            dispatch({ type: 'ADD_TO_WATCHLIST', payload: { ...movie, uid: userId } });
 
             try {
-                await projectFirestore.collection('watchlist').add(movie);
+                await projectFirestore.collection('watchlist').add({ ...movie, uid: userId });
                 history.push('/dashboard');
             } catch (error) {
                 console.log(error);
